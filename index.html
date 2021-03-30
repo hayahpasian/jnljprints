@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    
+    <!--HOVER EFFECT SRC-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.hoverintent/1.8.1/jquery.hoverIntent.js"></script>
+   
+    <!--FONTAWESOME CDN LINKS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" integrity="sha512-apX8rFN/KxJW8rniQbkvzrshQ3KvyEH+4szT3Sno5svdr6E/CP0QE862yEeLBMUnCqLko8QaugGkzvWS7uNfFQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .nav-link {
+            display: block;
+            padding: .5rem 1rem;
+            text-decoration: none;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+            color: #fff;
+            margin-right: 10px;
+            text-transform: uppercase;
+            font-weight: 200 !important;
+            font-size: 14px
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+        }
+
+        .navbar-nav .active {
+            border-bottom: 4px solid #fff
+        }
+
+        .logo {
+            margin-bottom: 7px !important
+        }
+
+        .navbar {
+            padding-top: .5rem;
+            padding-bottom: 0px !important
+        }
+
+        footer {
+            color: #fff;
+            text-align: center;
+        }
+
+        h1.title {
+            font-family: 'IBM Plex Sans', sans-serif;
+            text-align: center;
+            margin:2% 0;
+        }
+
+        .navbar-nav.ml-auto a:hover {
+            color: #489eec;
+        }
+    </style>
+	<title>HOME</title>
+</head>
+<body>
+	  <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Home.aspx">
+                <img src="images/JNLJ DP wHITE.png" width="50" class="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    <a class="nav-link" href="#services">SERVICES</a>
+                    <a class="nav-link" href="#products">PRODUCTS</a>
+                    <a class="nav-link" href="#contact">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="header">
+        <header>
+            <div id="indicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#indicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#indicators" data-slide-to="1"></li>
+                    <li data-target="#indicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <!-- Slide One - Set the background image for this slide in the line below -->
+                    <div id="img1" class="carousel-item active" style="background-image: url('images/JNLJ DP Black.png')">
+                    </div>
+                    <!-- Slide Two - Set the background image for this slide in the line below -->
+                    <div class="carousel-item" style="background-image: url('images/JNLJ DP Black.png')">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2 class="display-4">Image two</h2>
+                            <p class="lead">Some description about the second slide</p>
+                        </div>
+                    </div>
+                    <!-- Slide Three - Set the background image for this slide in the line below -->
+                    <div class="carousel-item" style="background-image: url('images/JNLJ DP Black.png')">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2 class="display-4">Image three</h2>
+                            <p class="lead">Some description about the third slide</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#indicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span> </a><a class="carousel-control-next" href="#indicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span> </a>
+            </div>
+        </header>
+    </section>
+
+    <section id="services">
+        <h1 class="title">SERVICES</h1>
+        <div class="row px3">
+            <div class="service-cont" id="service1">
+                <div class="serviceOL"></div>
+                <a href="#">
+                    <img src="http://placehold.jp/300x300.png" />
+                    <p class="desc">CRAFTS</p>
+                </a>
+            </div>
+            <div class="service-cont" id="service2">
+                <div class="serviceOL"></div>
+                <a href="#">
+                    <img src="http://placehold.jp/300x300.png" />
+                    <p class="desc">DESIGN</p>
+                </a>
+            </div>
+            <div class="service-cont" id="service3">
+                <div class="serviceOL"></div>
+                <a href="#">
+                    <img src="http://placehold.jp/300x300.png" />
+                    <p class="desc">PRINTING</p>
+                </a>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="products">
+        <h1 class="title">PRODUCTS</h1>
+        <div class="row">
+            <div class="col-6">
+                <div class="polaroid">
+                    <div class="prod-cont">
+                        <img src="images/tote.jpg" />
+                    </div>
+                    <div class="prod-desc-cont">
+                        <p class="prod-title">TOTE BAG</p>
+                        <p class="prod-desc">desc</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="polaroid">
+                    <div class="prod-cont">
+                        <img src="images/labels.jpg" />
+
+                    </div>
+                    <div class="prod-desc-cont">
+                        <p class="prod-title">LABELS</p>
+                        <p class="prod-desc">desc</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="polaroid">
+                    <div class="prod-cont">
+                        <img src="images/mugs.jpg" />
+                    </div>
+                    <div class="prod-desc-cont">
+                        <p class="prod-title">MUGS</p>
+                        <p class="prod-desc">desc</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="polaroid">
+                    <div class="prod-cont">
+                        <img src="images/stickers.jpg" />
+                    </div>
+                    <div class="prod-desc-cont">
+                        <p class="prod-title">STICKERS</p>
+                        <p class="prod-desc">desc</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="polaroid">
+                    <div class="prod-cont">
+                        <img src="images/KC.jpg" />
+                    </div>
+                    <div class="prod-desc-cont">
+                        <p class="prod-title">KEYCHAINS</p>
+                        <p class="prod-desc">desc</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="polaroid">
+                    <div class="prod-cont">
+                        <img src="images/TY Card.jpg" />
+
+                    </div>
+                    <div class="prod-desc-cont">
+                        <p class="prod-title">THANK YOU CARDS</p>
+                        <p class="prod-desc">desc</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="title">CONTACT US</h1>
+        <div>
+            <p class="subtitle">FOR MORE INFORMATION, MESSAGE US THROUGH THE FOLLOWING PLATFORMS</p>
+            <div class="row">
+                <div class="col-6">
+                    <p class="socials"><a href="#"><i class="fas fa-envelope"></i>: blahblah@gmail.com</a></p>
+                    <p class="socials"><a href="https://www.facebook.com/jnljprints"><i class="fab fa-facebook-square"></i>: JNLJ Crafts and Printing Services</a></p>
+
+                </div>
+                <div class="col-6">
+                    <p class="socials"><i class="fas fa-phone-square-alt"></i>: +639123456789</p>
+                    <p class="socials"><a href="#"><i class="fab fa-facebook-messenger"></i>: blahblah@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer>
+        <div class="bg-dark py-4">
+            <div class=" px-3">
+                <p>JNLJ CRAFTS AND PRINTING SERVICES</p>
+                <small>Copyright &copy; 2021. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
