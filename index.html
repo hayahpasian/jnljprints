@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-        <!--BOOTSTRAP-->
+  <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -11,241 +10,486 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <!--GOOGLE FONTS-->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-    
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!--ANIME.JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js" integrity="sha512-E378bwaeZf1nwXeJGIwTB58A5gPt5jFU3u6aTGja4ZdRFJeo/N/REKnBgNZOZlH6JdnOPO98vg2AnSGaNfCMFQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+
     <!--FONTAWESOME CDN LINKS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" integrity="sha512-apX8rFN/KxJW8rniQbkvzrshQ3KvyEH+4szT3Sno5svdr6E/CP0QE862yEeLBMUnCqLko8QaugGkzvWS7uNfFQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" />
- 
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
     
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <style>
-         body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .navbar-nav.ml-auto a {
-            color: gray;
-        }
-         a.nav-link.active {
-            background: gray;
-            color: white;
-            border-radius: 30px;
-        }
-
-         .navbar-nav.ml-auto a {
-            width: 100px;
-            text-align: center;
-         }
-
-            body {
-            background: #e9e9e9;
-        }
-
-        nav.navbar.navbar-expand-lg {
-            position: absolute;
-            width: 100%;
-        }
-
-        header {
-            position: relative;
-            z-index: -10;
-        }
-
         header img {
             display: block;
             object-fit: contain;
             width: 100%;
         }
 
-        div#header-contents {
-            position: absolute;
-            width: 100%;
-            top: 50px;
-            display: inline-flex;
-        }
-
-        .w-50 img {
-            width: 100%;
-        }
-
-        .w-50 p {
-            font-size: 6rem;
-            line-height: 1;
-            font-family: 'Poppins', sans-serif;
+        span.text-header p {
+            font-size: 3.5rem;
+            text-align: center;
             font-weight: 600;
-            color: gray;
         }
 
-        .w-50.header-desc {
-            padding-top: 12%;
-            padding-left: 5%;
+
+        /*ABOUT*/
+
+        .about {
+            background: #000000;
+         /*   position: relative;*/
         }
 
-        span.text-desc p {
-            font-size: 4.3rem;
-            font-weight: 600;
-            line-height: 0.8;
-            color: dimgray;
-        }
-
-        section#services {
-            padding: 5% 0;
-        }
-
-        span.sub-text {
-            color: dimgray;
-            font-weight: bold;
-        }
-
-        a#toContact {
-            background: gray;
+        div#about-contents {
+           /* position: absolute;*/
+            top: 0;
             color: white;
-            border-radius: 24px;
-            padding: .375rem 1rem;
-        }
-
-        .col-4 span {
-            display: block;
-        }
-        .col-4 span, .col-4 a {
-            margin-bottom: 3rem;
-        }
-
-        .icon {
+            width: 100%;
             height: 100%;
             text-align: center;
-            background: white;
-            margin-bottom: 2rem;
-            padding: 10% 0;
-            border-radius: 18px;
-            color: gray;
+        }
+
+            div#about-contents h1.title {
+                margin-bottom: 3.5%;
+            }
+
+        .about-desc {
+            line-height: 1;
+            text-align: center;
+            font-weight: 100;
+            font-size: 1.5rem;
+        }
+
+        a.btnToFB {
+            color: white;
+            border: solid white 2px;
+            border-radius: 37px;
+            padding: 1em 2em;
+            font-weight: 600;
+            font-size: .8rem;
+        }
+
+        .circles {
+            font-size: 5.8rem;
+            margin-bottom: 2.5%;
+        }
+
+        .about a.btn.btn-default.btnToFB {
+		    margin-bottom: 5%;
+		}
+
+        /*services*/
+        .services {
+		    padding: 5% 0;
+		}
+        section#services {
+           /* position: relative;*/
+        }
+
+        #services p.sub-text {
+            text-align: center;
+        }
+
+        .col-4.icon-card {
+            text-align: center;
         }
 
         p.icon-label {
-            margin-top: 2rem;
-        }
-        .col-6 {
-            margin-bottom: 2rem;
-            height: 200px;
+            font-weight: 600;
         }
 
-        .col-4 .icon {
-            margin-top: 24%;
-            height: 46.5%;
+        .icon-desc {
+            font-size: 1rem;
+            color: var(--font-footer);
+        }
+
+        .services {
+        /*    position: absolute;*/
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon-card {
+            margin-bottom: 3%;
+            height: 428px;
+            max-width: 360px;
+            background: white;
+            filter: drop-shadow(0px 0px 5px #e8e8e8);
+            padding: 5%;
+            border-radius: 8px;
+            margin-right: 2.5%;
+        }
+
+        p.icon-label {
+            margin-top: 3rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .icon-card:hover .icon-label, .icon-card:hover .icon-desc {
+		    display: none;
+		}
+
+  .icon-wrap {
+            margin: auto;
+            width: 100px;
+            position: relative;
+        }
+
+        .icon-wrap img {
+            width: auto;
+            height: 70px;
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            right: 0;
+            text-align: center;
+        }
+
+        .icon-wrap.blue circle {
+            fill: var(--faded-blue);
+        }
+        .icon-wrap.pink circle {
+            fill: var(--faded-magenta);
+        }
+                .icon-wrap.yellow circle {
+            fill: var(--faded-yellow);
+        }
+        /*contact*/
+        .contact {
+            color: white;
+            text-align: center;
+            position: relative;
+            background: #000000;
+        }
+
+        div#contact-contents {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+            div#contact-contents img {
+                width: 250px;
+                margin: 5%;
+            }
+
+        .contact-desc p {
+            line-height: 2;
+            font-size: .9rem;
+        }
+
+        .contact-desc, .about-desc {
+            margin-bottom: 5%;
+        }
+
+        .sub-text {
+            font-size: 1rem;
+        }
+
+		.deets {
+           display: none;
+            padding: 0;
+            font-size: 1.5rem;
+            text-align: left;
+            color: white;
+            font-weight: 100;
+            margin-top: 4rem;
+        }
+
+        .icon-card:hover .deets{
+            display:block;
         }
     </style>
-	<title>HOME</title>
+	<title>JNLJ Crafts and Printing Services</title>
 </head>
 <body>
-	   <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="Home.aspx">
-                <img src="imgs/Logo1.png" width="50" class="logo" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                    <a class="nav-link" href="#services">SERVICES</a>
-                    <a class="nav-link" href="#products">PRODUCTS</a>
-                    <a class="nav-link" href="#contact">CONTACT</a>
-                </div>
+	 <nav class="navbar navbar-expand-lg navbar-light container">
+        <a class="navbar-brand" href="#">
+            <img src="imgs/JNLJ DP Black.png" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="Home.aspx">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">About Us</a>
+                <a class="nav-item nav-link" href="#">Services</a>
+                <a class="nav-item nav-link" href="#">Gallery</a>
+                <a class="nav-item nav-link" id="contact" href="#">Contact Us</a>
             </div>
         </div>
     </nav>
+ <header>
+        <span class="text-header">
+            <p>For your printing needs.</p>
+        </span>
+        <img src="imgs/Header.png" />
 
-    <header>
-        <img src="imgs/site_bg.jpg" />
-        <div id="header-contents">
-            <div class="w-50">
-                <img src="imgs/JNLJ DP Black.png" />
-            </div>
-            <div class="w-50 header-desc">
-              <span class="text-header">
-                    <p>For your</p>
-                <p>printing</p>
-                <p>needs.</p>
-              </span>
+    </header>
+    <section id="about-us" style="background-image: url('imgs/OurStory-BG.png');">
+        <div class="about">         
+            <div id="about-contents">
+                <div class="circles">
+                    <span class="blue">.</span>
+                    <span class="pink">.</span>
+                    <span class="yellow">.</span>
+                    <span>.</span>
+                </div>
+                <h1 class="title">Our Story</h1>
+
+                <div class="about-desc">
+                    <p>We are a small business that offfers different kinds of printing.</p>
+                    <p>We specialize in designing and printing customized or</p>
+                    <p>
+                        personalized items that's perfect for 
+                       any ocassion.
+                    </p>
+                </div>
+
+                <a href="#" class="btn btn-default btnToFB">Contact us through ur Facebook page!</a>
             </div>
         </div>
-    </header>
-
-    <section id="services" class="container">
-        <div class="row">
-            <div class="col-4">
-               <div class="service-desc">
-                    <span class="text-desc">
-                    <p>Our</p>
-                       <p>Services</p>
-                </span>
-                <span class="sub-text">
-                    <p>Here are the services that we currently<br /> offer. You maysend sa message for any inquiries</p>
-                </span>
-               </div>
-
-                <a id="toContact" class="btn btn-default" href="#">Contact Us Today!</a>
-
-                  <div class="icon">
-                     <span class="img-cont"><img src="imgs/Docs.png"/></span>
-                     <p class="icon-label">Document<br />
-                         Printing/<br /> Photocopy/<br />Scanning
-                     </p>
-                 </div>
-            </div>
-             <div class="col-8 row">
-                 <div class="col-6">
-                    <div class="icon">
-                         <span class="img-cont"><img src="imgs/Photo Printing.png"/></span>
-                     <p class="icon-label">Photo Printing</p>
+    </section>
+    <section id="services" style="background-image: url('imgs/OurServices-BG.png');">
+       	  <div class="services">
+            <h1 class="title">Our Services</h1>
+            <p class="sub-text">Below are the different services that we offer.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 icon-card bg-blue">
+                        <div class="icon-cont">
+                            <div class="icon-wrap blue">
+                                <svg height="100" width="100">
+                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                </svg>
+                                <img class="icon-img" src="imgs/Docs.png" />
+                            </div>
+                        </div>
+                        <p class="icon-label">
+                            Document Printing/<br />
+                            Photocopy
+                        </p>
+                        <div class="icon-desc">
+                            <span>We print on documents that you need. Photocopy and scanning photos or documents
+                            is also available</span>
+                        </div>
+                        <ul class="deets">
+                            <li>Black and White</li>
+                            <li>Colored</li>
+                            <li>Scanning</li>
+                            <li>Photocopy</li>
+                        </ul>
                     </div>
-                 </div>
-                 <div class="col-6">
-                      <div class="icon">
-                     <span class="img-cont"><img src="imgs/Stickers.png"/></span>
-                     <p class="icon-label">Stickers/Labels</p>
-                          </div>
-                 </div>
-                 <div class="col-6">
-                      <div class="icon">
-                     <span class="img-cont"><img src="imgs/Keychain.png"/></span>
-                     <p class="icon-label">Personalized<br />Acrylic Keychain</p>
-                          </div>
-                 </div>
-                 <div class="col-6">
-                      <div class="icon">
-                     <span class="img-cont"><img src="imgs/Shirt.png"/></span>
-                     <p class="icon-label">T-shirt Printing</p>
-                          </div>
-                 </div>
-                 <div class="col-6">
-                      <div class="icon">
-                     <span class="img-cont"><img src="imgs/Laminate.png"/></span>
-                     <p class="icon-label">Laminating</p>
-                          </div>
-                 </div>
-                 <div class="col-6">
-                      <div class="icon">
-                     <span class="img-cont"><img src="imgs/Calling Card.png"/></span>
-                     <p class="icon-label">Business/Calling/Thank You Cards</p>
-                          </div>
-                 </div>
-                 <div class="col-6">
-                      <div class="icon">
-                     <span class="img-cont"><img src="imgs/Mug.png"/></span>
-                     <p class="icon-label">Personalized Mugs</p>
-                          </div>
-                 </div>
-                 <div class="col-6">
-                      <div class="icon">
-                     <span class="img-cont"><img src="imgs/Totes.png"/></span>
-                     <p class="icon-label">Canvas Tote Bags & Purse</p>
-                          </div>
-                 </div>
-             </div>
+                    <div class="col-4 icon-card bg-blue">
+                        <div class="icon-cont">
+                            <div class="icon-wrap blue">
+                                <svg height="100" width="100">
+                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                </svg>
+                                <img class="icon-img" src="imgs/Photo Printing.png" />
+                            </div>
+                        </div>
+                        <p class="icon-label">Photo Printing</p>
+                        <div class="icon-desc">
+                            <span>We print quality phot paper for photos that you want to be printed. Different sizes are available.</span>
+                        </div>
+
+                        <ul class="deets">
+                            <li>ID Size</li>
+                            <li>3R</li>
+                            <li>4R</li>
+                            <li>5R</li>
+                            <li>A4</li>
+                        </ul>
+                    </div>
+                    <div class="col-4 icon-card bg-blue">
+                        <div class="icon-cont">
+                            <div class="icon-wrap blue">
+                                <svg height="100" width="100">
+                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                </svg>
+                                <img class="icon-img" src="imgs/Laminate.png" />
+                            </div>
+                        </div>
+                        <p class="icon-label">Laminating</p>
+                        <div class="icon-desc">
+                            <span>Want your documents or photos to last long? We can have them laminated for you. Available in different sizes and thickness.</span>
+                        </div>
+
+                        <ul class="deets">
+                            <li>ID Size (250 micron)</li>
+                            <li>3R (125 micron)</li>
+                            <li>4R (250 micron)</li>
+                            <li>5R (125 micron)</li>
+                            <li>A4 (250 micron)</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 icon-card bg-pink">
+                        <div class="icon-cont">
+                            <div class="icon-wrap pink">
+                                <svg height="100" width="100">
+                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                </svg>
+                                <img class="icon-img" src="imgs/Calling Card.png" />
+                            </div>
+                        </div>
+                        <p class="icon-label">
+                            Business/Calling/<br />
+                            thank you Cards
+                        </p>
+                        <div class="icon-desc">
+                            <span>We print business cards or calling cards and thank you cards for your business.</span>
+                        </div>
+
+                        <ul class="deets">
+                            <li>250 gsm paper</li>
+                            <li>One Side</li>
+                            <li>Back-to-Back</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 icon-card bg-pink">
+                        <div class="icon-cont">
+                            <div class="icon-wrap pink">
+                                <svg height="100" width="100">
+                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                </svg>
+                                <img class="icon-img" src="imgs/Stickers.png" />
+                            </div>
+                        </div>
+                        <p class="icon-label">Stickers/Labels</p>
+                        <div class="icon-desc">
+                            <span>We print quality, waterproof, and simple smudge-proof stickers and/or labels for your personal or business needs.</span>
+                        </div>
+
+                        <ul class="deets">
+                            <li>Glossy, Matte, Transparent</li>
+                            <li>Kraft</li>
+                            <li>Glitter, 3D</li>
+                            <li>3M Reflective</li>
+                            <li>Holographic</li>
+                        </ul>
+                    </div>
+                    <div class="col-4 icon-card bg-pink">
+                        <div class="icon-cont">
+                            <div class="icon-wrap pink">
+                                <svg height="100" width="100">
+                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                </svg>
+                                <img class="icon-img" src="imgs/Keychain.png" />
+                            </div>
+                        </div>
+                        <p class="icon-label">
+                            Personalized
+                            <br />
+                            Acrylic Keychain
+                        </p>
+                        <div class="icon-desc">
+                            <span>We provide photo-insert acrylic keychains, available in different variations and fully customizable.</span>
+                        </div>
+
+                        <ul class="deets">
+                            <li>Circle</li>
+                            <li>Square</li>
+                            <li>Rectangle</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 icon-card bg-yellow">
+                        <div class="icon-cont">
+                            <div class="icon-wrap yellow">
+                                <svg height="100" width="100">
+                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                </svg>
+                                <img class="icon-img" src="imgs/Mug.png" />
+                            </div>
+                        </div>
+                        <p class="icon-label">Personalized Mugs</p>
+                        <div class="icon-desc">
+                            <span>We make personalized mugs that are perfect for any occasion. Avaible in different variations.</span>
+                        </div>
+
+                        <ul class="deets">
+                            <li>Plain(Glossy White)</li>
+                            <li>Magic(Matte Black)</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 icon-card bg-yellow">
+                        <div class="icon-cont">
+                            <div class="icon-wrap yellow">
+                                <svg height="100" width="100">
+                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                </svg>
+                                <img class="icon-img" src="imgs/Totes.png" />
+                            </div>
+                        </div>
+                        <p class="icon-label">Canvas Tote<br />
+                            Bags & Purse</p>
+                        <div class="icon-desc">
+                            <span>We print on canvas tote bags and coin purse through sublimation process. Available in different sizes.</span>
+                        </div>
+
+                        <ul class="deets">
+                            <li>10" x 12" Flat</li>
+                            <li>13.5" x 16" Flat</li>
+                            <li>13.5" x 16" With Zipper</li>
+                            <li>13.5" x 16" With Base</li>
+                            <li>4" x 3" Purse</li>
+                        </ul>
+                    </div>
+              
+                <div class="col-4 icon-card bg-yellow">
+                    <div class="icon-cont">
+                        <div class="icon-wrap yellow">
+                            <svg height="100" width="100">
+                                <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                            </svg>
+                            <img class="icon-img" src="imgs/Magnet.png" />
+                        </div>
+                    </div>
+                    <p class="icon-label">Fridge Magnet</p>
+                    <div class="icon-desc">
+                        <span>We make fridge magnets that are perfect for souvenirs or gifts.</span>
+                    </div>
+                    <ul class="deets">
+                        <li>54mm x 86mm</li>
+                    </ul>
+                </div>  
+            	</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" >
+        <div class="contact">
+            <img class="bg" src="imgs/GetInTouch-BG.png" />
+            <div id="contact-contents">
+                <img src="imgs/JNLJ DP wHITE.png" />
+
+                <div class="contact-desc">
+                    <h1 class="title">Get in touch with us!</h1>
+                    <p class="sub-text">
+                        Ready to order? Or have any questions or inquiries? No worries!<br />
+                        Just leave us a message and we'll  get right back to you.
+                    </p>
+
+                </div>
+                <a href="#" class="btn btn-default btnToFB">Contact us through ur Facebook page!</a>
+            </div>
         </div>
     </section>
 </body>
