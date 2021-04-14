@@ -1,4 +1,4 @@
-:root {
+ :root {
             --blue: #489eec;
             --magenta: #d4047a;
             --yellow: #fbf114;
@@ -18,7 +18,6 @@
 
         .blue {
             color: var(--blue);
-            color:white;
         }
 
         .bg-blue:hover {
@@ -53,11 +52,14 @@
             }
         }
 
-        a#contact {
+       a#contact {
+            border: solid black;
+            border-radius: 4rem;
+            padding: 0.5rem 1rem;
+        }
+        a#contact:hover {
             background: #000;
             color: white;
-            border-radius: 35px;
-            padding: 0.5rem 1rem;
         }
 
         body {
@@ -78,8 +80,224 @@
             text-align: center;
             font-weight: 700;
             font-size: 3rem;
+            margin-bottom: 2rem;
         }
 
         a.nav-item.nav-link.active, a.nav-item.nav-link:hover {
             font-weight: 600;
         }
+
+        footer p {
+            margin: 0;
+        }
+        footer {
+            background: var(--font-footer);
+            padding: 2.5%;
+            text-align: center;
+            color: var(--footer-font);
+        }
+
+/*HOME CSS*/
+  header img {
+            display: block;
+            object-fit: contain;
+            width: 100%;
+        }
+
+        span.text-header p {
+            font-size: 5.5rem;
+            text-align: center;
+            font-weight: 900;
+            margin: 2rem 0;
+        }
+
+
+        /*ABOUT*/
+
+        .about {
+            background: #000000;
+            position: relative;
+        }
+
+        section#about-us img {
+            display: inline-block;
+            object-fit: cover;
+            width: 100%;
+            max-height: 700px;
+        }
+        div#about-contents {
+            position: absolute;
+            top: 0;
+            color: white;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+            div#about-contents h1.title {
+                margin-bottom: 3.5%;
+            }
+
+        .about-desc {
+            line-height: 1;
+            text-align: center;
+            font-weight: 100;
+            font-size: 1.5rem;
+        }
+
+        a.btnToFB {
+            color: white;
+            border: solid white 2px;
+            border-radius: 37px;
+            padding: 1em 2em;
+            font-weight: 600;
+            font-size: .8rem;
+        }
+
+        .circles {
+            font-size: 5.8rem;
+            margin-bottom: 2.5%;
+        }
+
+        p.sub-text {
+            margin-bottom: 2rem;
+        }
+        .about a.btn.btn-default.btnToFB {
+            margin-bottom: 5%;
+        }
+
+        /*services*/
+        .services {
+            padding: 5% 0;
+        }
+
+
+        #services p.sub-text {
+            text-align: center;
+        }
+
+        .col-4.icon-card {
+            text-align: center;
+        }
+
+        p.icon-label {
+            font-weight: 600;
+        }
+
+        .icon-desc {
+            font-size: 1rem;
+            color: var(--font-footer);
+        }
+
+
+        .icon-card {
+            margin-bottom: 3%;
+            height: 428px;
+            max-width: 360px;
+            background: white;
+            filter: drop-shadow(0px 0px 5px #e8e8e8);
+            padding: 5%;
+            border-radius: 8px;
+            margin-right: 2.5%;
+        }
+
+        p.icon-label {
+            margin-top: 3rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .icon-wrap {
+            margin: auto;
+            width: 120px;
+            position: relative;
+        }
+
+            .icon-wrap img {
+                width: auto;
+                height: 50px;
+                position: absolute;
+                top: 0;
+                text-align: center;
+                margin: auto;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                bottom: 0;
+            }
+
+            .icon-wrap.blue circle {
+                fill: var(--faded-blue);
+            }
+
+            .icon-wrap.pink circle {
+                fill: var(--faded-magenta);
+            }
+
+            .icon-wrap.yellow circle {
+                fill: var(--faded-yellow);
+            }
+        /*contact*/
+        .contact {
+            color: white;
+            text-align: center;
+            position: relative;
+            background: #000000;
+        }
+
+        div#contact-contents {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+            div#contact-contents img {
+                width: 250px;
+                margin: 5%;
+            }
+
+        .contact-desc p {
+            line-height: 2;
+            font-size: .9rem;
+        }
+
+        .contact-desc, .about-desc {
+            margin-bottom: 5%;
+        }
+
+        img.bg {
+            max-height: 900px;
+            object-fit: cover;
+        }
+        .sub-text {
+            font-size: 1rem;
+        }
+
+        .icon-card:hover .icon-label, .icon-card:hover .icon-desc {
+            display: none;
+        }
+
+        .deets {
+            display: none;
+            padding: 0;
+            font-size: 1.2rem;
+            text-align: left;
+            font-weight: 100;
+            margin-top: 3rem;
+            color: white;
+        }
+
+        .bg-yellow .deets {
+            color: black;
+        }
+
+        .icon-card:hover .deets {
+            display: block;
+        }
+
+        .icon-card:hover circle{
+            fill: #fafafa;
+        }
+
+       
