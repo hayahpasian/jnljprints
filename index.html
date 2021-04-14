@@ -44,11 +44,11 @@
 
         .about {
             background: #000000;
-         /*   position: relative;*/
+            position: relative;
         }
 
         div#about-contents {
-           /* position: absolute;*/
+            position: absolute;
             top: 0;
             color: white;
             width: 100%;
@@ -82,16 +82,14 @@
         }
 
         .about a.btn.btn-default.btnToFB {
-		    margin-bottom: 5%;
-		}
+            margin-bottom: 5%;
+        }
 
         /*services*/
         .services {
-		    padding: 5% 0;
-		}
-        section#services {
-           /* position: relative;*/
+            padding: 5% 0;
         }
+
 
         #services p.sub-text {
             text-align: center;
@@ -110,12 +108,6 @@
             color: var(--font-footer);
         }
 
-        .services {
-        /*    position: absolute;*/
-            top: 0;
-            width: 100%;
-            height: 100%;
-        }
 
         .icon-card {
             margin-bottom: 3%;
@@ -134,37 +126,36 @@
             font-weight: 600;
         }
 
-        .icon-card:hover .icon-label, .icon-card:hover .icon-desc {
-		    display: none;
-		}
-
-  .icon-wrap {
+        .icon-wrap {
             margin: auto;
-            width: 100px;
+            width: 120px;
             position: relative;
         }
 
-        .icon-wrap img {
-            width: auto;
-            height: 70px;
-            position: absolute;
-            top: 1rem;
-            left: 0;
-            margin-left: auto;
-            margin-right: auto;
-            right: 0;
-            text-align: center;
-        }
+            .icon-wrap img {
+                width: auto;
+                height: 70px;
+                position: absolute;
+                top: 0;
+                text-align: center;
+                margin: auto;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                bottom: 0;
+            }
 
-        .icon-wrap.blue circle {
-            fill: var(--faded-blue);
-        }
-        .icon-wrap.pink circle {
-            fill: var(--faded-magenta);
-        }
-                .icon-wrap.yellow circle {
-            fill: var(--faded-yellow);
-        }
+            .icon-wrap.blue circle {
+                fill: var(--faded-blue);
+            }
+
+            .icon-wrap.pink circle {
+                fill: var(--faded-magenta);
+            }
+
+            .icon-wrap.yellow circle {
+                fill: var(--faded-yellow);
+            }
         /*contact*/
         .contact {
             color: white;
@@ -198,19 +189,33 @@
             font-size: 1rem;
         }
 
-		.deets {
-           display: none;
-            padding: 0;
-            font-size: 1.5rem;
-            text-align: left;
-            color: white;
-            font-weight: 100;
-            margin-top: 4rem;
+        .icon-card:hover .icon-label, .icon-card:hover .icon-desc {
+            display: none;
         }
 
-        .icon-card:hover .deets{
-            display:block;
+        .deets {
+            display: none;
+            padding: 0;
+            font-size: 1.2rem;
+            text-align: left;
+            font-weight: 100;
+            margin-top: 3rem;
+            color: white;
         }
+
+        .bg-yellow .deets {
+            color: black;
+        }
+
+        .icon-card:hover .deets {
+            display: block;
+        }
+
+        .icon-card:hover circle{
+            fill: #fafafa;
+        }
+
+       
     </style>
 	<title>JNLJ Crafts and Printing Services</title>
 </head>
@@ -222,24 +227,25 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+            <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link active" href="Home.aspx">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">About Us</a>
-                <a class="nav-item nav-link" href="#">Services</a>
+                <a class="nav-item nav-link" href="#about-us">About Us</a>
+                <a class="nav-item nav-link" href="#services">Services</a>
                 <a class="nav-item nav-link" href="#">Gallery</a>
-                <a class="nav-item nav-link" id="contact" href="#">Contact Us</a>
+                <a class="nav-item nav-link" id="contact" href="#contact-info">Contact Us</a>
             </div>
         </div>
     </nav>
- <header>
+  <header>
         <span class="text-header">
             <p>For your printing needs.</p>
         </span>
         <img src="imgs/Header.png" />
 
     </header>
-    <section id="about-us" style="background-image: url('imgs/OurStory-BG.png');">
-        <div class="about">         
+    <section id="about-us">
+        <div class="about">
+            <img class="bg" src="imgs/OurStory-BG.png" />
             <div id="about-contents">
                 <div class="circles">
                     <span class="blue">.</span>
@@ -258,12 +264,13 @@
                     </p>
                 </div>
 
-                <a href="#" class="btn btn-default btnToFB">Contact us through ur Facebook page!</a>
+                <a href="https://www.facebook.com/jnljprints" class="btn btn-default btnToFB">Contact us through ur Facebook page!</a>
             </div>
         </div>
     </section>
-    <section id="services" style="background-image: url('imgs/OurServices-BG.png');">
-       	  <div class="services">
+    <section id="services" style="background: url('../imgs/OurServices-BG.png')">
+
+        <div class="services">
             <h1 class="title">Our Services</h1>
             <p class="sub-text">Below are the different services that we offer.</p>
             <div class="container">
@@ -271,8 +278,8 @@
                     <div class="col-4 icon-card bg-blue">
                         <div class="icon-cont">
                             <div class="icon-wrap blue">
-                                <svg height="100" width="100">
-                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                <svg height="120" width="120">
+                                    <circle cx="60" cy="60" r="60" stroke="black" stroke-width="0" fill="white" />
                                 </svg>
                                 <img class="icon-img" src="imgs/Docs.png" />
                             </div>
@@ -295,8 +302,8 @@
                     <div class="col-4 icon-card bg-blue">
                         <div class="icon-cont">
                             <div class="icon-wrap blue">
-                                <svg height="100" width="100">
-                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                <svg height="120" width="120">
+                                    <circle cx="60" cy="60" r="60" stroke="black" stroke-width="0" fill="white" />
                                 </svg>
                                 <img class="icon-img" src="imgs/Photo Printing.png" />
                             </div>
@@ -317,8 +324,8 @@
                     <div class="col-4 icon-card bg-blue">
                         <div class="icon-cont">
                             <div class="icon-wrap blue">
-                                <svg height="100" width="100">
-                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                <svg height="120" width="120">
+                                    <circle cx="60" cy="60" r="60" stroke="black" stroke-width="0" fill="white" />
                                 </svg>
                                 <img class="icon-img" src="imgs/Laminate.png" />
                             </div>
@@ -340,8 +347,8 @@
                     <div class="col-4 icon-card bg-pink">
                         <div class="icon-cont">
                             <div class="icon-wrap pink">
-                                <svg height="100" width="100">
-                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                <svg height="120" width="120">
+                                    <circle cx="60" cy="60" r="60" stroke="black" stroke-width="0" fill="white" />
                                 </svg>
                                 <img class="icon-img" src="imgs/Calling Card.png" />
                             </div>
@@ -364,8 +371,8 @@
                     <div class="col-4 icon-card bg-pink">
                         <div class="icon-cont">
                             <div class="icon-wrap pink">
-                                <svg height="100" width="100">
-                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                <svg height="120" width="120">
+                                    <circle cx="60" cy="60" r="60" stroke="black" stroke-width="0" fill="white" />
                                 </svg>
                                 <img class="icon-img" src="imgs/Stickers.png" />
                             </div>
@@ -386,8 +393,8 @@
                     <div class="col-4 icon-card bg-pink">
                         <div class="icon-cont">
                             <div class="icon-wrap pink">
-                                <svg height="100" width="100">
-                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                <svg height="120" width="120">
+                                    <circle cx="60" cy="60" r="60" stroke="black" stroke-width="0" fill="white" />
                                 </svg>
                                 <img class="icon-img" src="imgs/Keychain.png" />
                             </div>
@@ -411,8 +418,8 @@
                     <div class="col-4 icon-card bg-yellow">
                         <div class="icon-cont">
                             <div class="icon-wrap yellow">
-                                <svg height="100" width="100">
-                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                <svg height="120" width="120">
+                                    <circle cx="60" cy="60" r="60" stroke="black" stroke-width="0" fill="white" />
                                 </svg>
                                 <img class="icon-img" src="imgs/Mug.png" />
                             </div>
@@ -431,14 +438,16 @@
                     <div class="col-4 icon-card bg-yellow">
                         <div class="icon-cont">
                             <div class="icon-wrap yellow">
-                                <svg height="100" width="100">
-                                    <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
+                                <svg height="120" width="120">
+                                    <circle cx="60" cy="60" r="60" stroke="black" stroke-width="0" fill="white" />
                                 </svg>
                                 <img class="icon-img" src="imgs/Totes.png" />
                             </div>
                         </div>
-                        <p class="icon-label">Canvas Tote<br />
-                            Bags & Purse</p>
+                        <p class="icon-label">
+                            Canvas Tote<br />
+                            Bags & Purse
+                        </p>
                         <div class="icon-desc">
                             <span>We print on canvas tote bags and coin purse through sublimation process. Available in different sizes.</span>
                         </div>
@@ -451,30 +460,32 @@
                             <li>4" x 3" Purse</li>
                         </ul>
                     </div>
-              
-                <div class="col-4 icon-card bg-yellow">
-                    <div class="icon-cont">
-                        <div class="icon-wrap yellow">
-                            <svg height="100" width="100">
-                                <circle cx="50" cy="50" r="50" stroke="black" stroke-width="0" fill="white" />
-                            </svg>
-                            <img class="icon-img" src="imgs/Magnet.png" />
+
+                    <div class="col-4 icon-card bg-yellow">
+                        <div class="icon-cont">
+                            <div class="icon-wrap yellow">
+                                <svg height="120" width="120">
+                                    <circle cx="60" cy="60" r="60" stroke="black" stroke-width="0" fill="white" />
+                                </svg>
+                                <img class="icon-img" src="imgs/Magnet.png" />
+                            </div>
                         </div>
+                        <p class="icon-label">Fridge Magnet</p>
+                        <div class="icon-desc">
+                            <span>We make fridge magnets that are perfect for souvenirs or gifts.</span>
+                        </div>
+                        <ul class="deets">
+                            <li>54mm x 86mm</li>
+                        </ul>
                     </div>
-                    <p class="icon-label">Fridge Magnet</p>
-                    <div class="icon-desc">
-                        <span>We make fridge magnets that are perfect for souvenirs or gifts.</span>
-                    </div>
-                    <ul class="deets">
-                        <li>54mm x 86mm</li>
-                    </ul>
-                </div>  
-            	</div>
+                </div>
+
             </div>
         </div>
+
     </section>
 
-    <section id="contact" >
+    <section id="contact-info">
         <div class="contact">
             <img class="bg" src="imgs/GetInTouch-BG.png" />
             <div id="contact-contents">
@@ -488,7 +499,7 @@
                     </p>
 
                 </div>
-                <a href="#" class="btn btn-default btnToFB">Contact us through ur Facebook page!</a>
+                <a href="https://www.facebook.com/jnljprints" class="btn btn-default btnToFB">Contact us through ur Facebook page!</a>
             </div>
         </div>
     </section>

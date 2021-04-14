@@ -1,4 +1,4 @@
-   :root {
+:root {
             --blue: #489eec;
             --magenta: #d4047a;
             --yellow: #fbf114;
@@ -14,12 +14,11 @@
 
         .bg-yellow:hover {
             background: var(--yellow);
-            color: white !important;
         }
 
         .blue {
             color: var(--blue);
-            color: white !important;
+            color:white;
         }
 
         .bg-blue:hover {
@@ -35,8 +34,6 @@
         }
 
 
-
-
         body {
             font-family: 'Poppins', sans-serif;
         }
@@ -49,6 +46,19 @@
             width: 170px;
         }
 
+         @media (min-width: 992px){
+           .navbar-expand-lg .navbar-nav .nav-link {
+                padding-right: 2rem;
+                padding-left: 1rem;
+            }
+        }
+
+        a#contact {
+            background: #000;
+            color: white;
+            border-radius: 35px;
+            padding: 0.5rem 1rem;
+        }
 
         body {
             background: #fafafa;
@@ -68,4 +78,8 @@
             text-align: center;
             font-weight: 700;
             font-size: 3rem;
+        }
+
+        a.nav-item.nav-link.active, a.nav-item.nav-link:hover {
+            font-weight: 600;
         }
