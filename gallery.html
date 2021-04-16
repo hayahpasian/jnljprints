@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!--ANIME.JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js" integrity="sha512-E378bwaeZf1nwXeJGIwTB58A5gPt5jFU3u6aTGja4ZdRFJeo/N/REKnBgNZOZlH6JdnOPO98vg2AnSGaNfCMFQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+
+    <!--FONTAWESOME CDN LINKS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" integrity="sha512-apX8rFN/KxJW8rniQbkvzrshQ3KvyEH+4szT3Sno5svdr6E/CP0QE862yEeLBMUnCqLko8QaugGkzvWS7uNfFQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+
+    <!--AOS-->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+    <!--anime js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<title>JNLJ Gallery</title>
+	<style>
+		 div#title {
+            text-align: center;
+        }
+
+        #tabs a.nav-item.nav-link.active, #tabs a.nav-item.nav-link:hover {
+            border-bottom: solid 5px;
+        }
+
+        #tabs a.nav-item.nav-link.active, #tabs a.nav-item.nav-link:hover {
+            font-weight: 600;
+        }
+
+        #tabs .nav-tabs .nav-item.show .nav-link, #tabs .nav-tabs .nav-link.active {
+            border: none;
+            background: transparent;
+        }
+
+        .nav-tabs {
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .nav-tabs {
+            border-bottom: none;
+        }
+
+            .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+                border: none;
+            }
+
+        div#nav-tab a {
+            color: var(--font-footer);
+        }
+
+        #tabs nav, .mugs {
+            padding: 0 5%;
+        }
+
+        .img-cont {
+            margin: 15px 0;
+        }
+
+        .img-wrap img {
+            border-radius: 10px;
+        }
+
+        #title h1.page-title {
+            font-size: 5.5rem;
+            font-weight: 700;
+            margin-bottom: 2.5%;
+        }
+
+        p.page-desc {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--font-footer);
+        }
+
+        div#title {
+            margin-bottom: 5%;
+        }
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light container">
+        <a class="navbar-brand" href="#">
+            <img src="imgs/JNLJ DP Black.png" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="index.html#about-us">About Us</a>
+                <a class="nav-item nav-link" href="index.html#services">Services</a>
+                <a class="nav-item nav-link" href="gallery.html">Gallery</a>
+                <a class="nav-item nav-link" id="contact" href="index.html#contact-info">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+<div class="page">
+        <div id="title">
+            <h1 class="page-title">Our Gallery</h1>
+            <p class="page-desc">Browse through our gallery and check out our products.</p>
+        </div>
+
+        <section id="tabs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 ">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-mugs-tab" data-toggle="tab" href="#nav-mugs" role="tab" aria-controls="nav-mugs" aria-selected="true">MUGS</a>
+                                <a class="nav-item nav-link" id="nav-stickers-tab" data-toggle="tab" href="#nav-stickers" role="tab" aria-controls="nav-stickers" aria-selected="false">STICKERS</a>
+                                <a class="nav-item nav-link" id="nav-cards-tab" data-toggle="tab" href="#nav-cards" role="tab" aria-controls="nav-cards" aria-selected="false">BUSINESS CARDS</a>
+                                <a class="nav-item nav-link" id="nav-bags-tab" data-toggle="tab" href="#nav-bags" role="tab" aria-controls="nav-bags" aria-selected="false">TOTE BAGS</a>
+                                <a class="nav-item nav-link" id="nav-keychains-tab" data-toggle="tab" href="#nav-keychains" role="tab" aria-controls="nav-keychains" aria-selected="false">ACRYLIC KEYCHAINS</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-mugs" role="tabpanel" aria-labelledby="nav-mugs-tab">
+                                <div class="container">
+                                    <div class="row mugs">
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-stickers" role="tabpanel" aria-labelledby="nav-stickers-tab">
+                                   <div class="container">
+                                    <div class="row stickers">
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+				
+                            </div>
+                            <div class="tab-pane fade" id="nav-cards" role="tabpanel" aria-labelledby="nav-cards-tab">
+                                   <div class="container">
+                                    <div class="row cards">
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-bags" role="tabpanel" aria-labelledby="nav-bags-tab">
+                                   <div class="container">
+                                    <div class="row bags">
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-keychains" role="tabpanel" aria-labelledby="nav-keychains-tab">
+                                    <div class="container">
+                                    <div class="row keychains">
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+                                        <div class="col-4 img-cont">
+                                            <div class="img-wrap">
+                                                <img src="http://placehold.jp/300x300.png" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ./Tabs -->
+    </div>
+
+     <section id="contact-info" style="background-image: url('../imgs/GetInTouch-BG.png')">
+        <div class="contact" data-aos="fade-down">
+            <div id="contact-contents">
+                <img src="imgs/JNLJ DP wHITE.png" />
+
+                <div class="contact-desc">
+                    <h1 class="title">Get in touch with us!</h1>
+                    <p class="sub-text">
+                        Ready to order? Or have any questions or inquiries? No worries!<br />
+                        Just leave us a message and we'll  get right back to you.
+                    </p>
+
+                </div>
+                <a href="https://www.facebook.com/jnljprints" class="btn btn-default btnToFB">Contact us through our Facebook page!</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-inner">
+            <p>JNLJ Crafts & Printing &copy 2021. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
