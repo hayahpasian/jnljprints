@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+ <!--anime js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!--AOS-->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+   
 	<!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+   
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -28,14 +38,12 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 
-
-    <!--AOS-->
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-
-    <!--anime js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 	<title>JNLJ Gallery</title>
+
+  <!--BUTTER JS-->
+  <!--   <script src="js/butter.js"></script>
+ -->
+
 	<style>
 		 div#title {
             text-align: center;
@@ -141,11 +149,20 @@
                     delay: (el, i) => 500 + 30 * i
                 })
 
-            $('.deets').each(function () {
-                $(this).find('li').each(function () {
+            $('.img-cont').click(function(){
 
-                });
+                let img = $(this).find('.img-wrap').html();
+                
+                $('#modal-img').html(img);
+                $('#imgModal').modal();
             });
+       
+
+             //  butter.init({
+             //    cancelOnTouch: true,
+             //     wrapperDamper: 0.06
+             // });
+
         });
     </script>
 </head>
@@ -158,17 +175,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="index.html">Home </a>
                 <a class="nav-item nav-link" href="index.html#about-us">About Us</a>
                 <a class="nav-item nav-link" href="index.html#services">Services</a>
-                <a class="nav-item nav-link" href="gallery.html">Gallery</a>
+                <a class="nav-item nav-link active" href="gallery.html">Gallery</a>
                 <a class="nav-item nav-link" id="contact" href="index.html#contact-info">Contact Us</a>
             </div>
         </div>
     </nav>
-<div class="page">
+<div id="butter">
+    <div class="page">
         <div id="title">
-            <h1 class="page-title">Our Gallery</h1>
+            <h1 class="page-title ml12">Our Gallery</h1>
             <p class="page-desc">Browse through our gallery and check out our products.</p>
         </div>
 
@@ -289,7 +307,7 @@
 
                                     </div>
                                 </div>
-				
+                
                             </div>
                             <div class="tab-pane fade" id="nav-cards" role="tabpanel" aria-labelledby="nav-cards-tab">
                                    <div class="container">
@@ -494,18 +512,8 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function(){
-
-            $('.img-cont').click(function(){
-
-                let img = $(this).find('.img-wrap').html();
-                
-                $('#modal-img').html(img);
-                $('#modal-img').modal();
-            });
-        });
-    </script>
+</div>
+   
     <footer>
         <div class="footer-inner">
             <p>JNLJ Crafts & Printing &copy 2021. All Rights Reserved.</p>
