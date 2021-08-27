@@ -5,6 +5,8 @@ $(document).ready(function(){
   centerPadding: '5%',
   slidesToShow: 3,
   adaptiveHeight:true,
+  autoplay: true,
+  autoplaySpeed: 3000,
   responsive: [
     {
       breakpoint: 768,
