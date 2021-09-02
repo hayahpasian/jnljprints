@@ -9,6 +9,10 @@ p, a{
     font-family: "Canela" ;
 }
 
+.mobile{
+    display: none;
+}
+
 /*SECTION TITLE*/
 
 .section-title {
@@ -36,6 +40,11 @@ span.section-hr > span {
 .title {
     font-size: 60px;
 }
+
+.navbar-dark .navbar-toggler {
+    border-color: transparent;
+}
+
 
 /*=======================================
 *****************HEADER******************
@@ -81,8 +90,9 @@ span.text-header {
 }
 
 header a {
-    color: white !important;
+    color: white;
 }
+
 header {
     color: white;
 }
@@ -100,10 +110,24 @@ header {
 
 .btn-white{
 	border-color: white;
+    background-color: white;
+    color: black;
+}
+
+.btn-white:hover{
+    color: white;
+    background-color: transparent;
 }
 
 .btn-black{
+    color: white;
 	border-color: black;
+    background-color: black;
+}
+
+.btn-black:hover{
+    color: black;
+    background-color: transparent;
 }
 
 .header-subtext {
@@ -118,7 +142,7 @@ header {
 /*=======================================
 *****************SLIDER******************
 =========================================*/
-section#img-carousel1 {
+section#img-carousel1, section#img-carousel2 {
     margin-top: 7rem;
 }
 
@@ -144,6 +168,7 @@ section#img-carousel1 {
 }
 .bg-img {
     position: absolute;
+    z-index: -2;
 }
 
 .serv-card .bg-img img {
@@ -229,6 +254,10 @@ p.exp {
     color: #2B2B2B;
 }
 
+.prod-img img {
+    width: 100%;
+}
+
 /*=======================================
 *****************FOOTER******************
 =========================================*/
@@ -269,6 +298,7 @@ p.socials a {
 
 .foot-left{
     width: 70%;
+    border-right: solid white 1px;
 }
 
 
@@ -276,9 +306,159 @@ p.socials a {
     display: flex;
     width: 30%;
     text-align: right;
-    border-color: white;
+    border-left: solid white 1px;
+    justify-content: flex-end;
 }
 
 .foot-left .inner {
     width: 85%;
+}
+
+
+@media screen and (max-width: 768px){
+    p{
+        font-size: 16px;
+    }
+
+    .pc{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .container {
+        max-width: 100%;
+        padding-left: 7.5%;
+        padding-right: 14%;
+    }
+
+    .navbar-brand {
+        display: inline-flex;
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    a.navbar-brand img {
+        width: 30%;
+    }
+
+    .offset-top {
+        margin: 0;
+    }
+
+    .services-row .serv-card {
+        width: 100%;
+        max-width: 100%;
+    }
+    .services-row {
+        flex-flow: column;
+    }
+
+    .serv-card.offset-top .serv-card-inner {
+        flex-flow: row;
+        align-self: flex-end;
+    }
+
+    .serv-card.offset-top .serv-card-inner .service-desc {
+        text-align: left;
+    }
+
+    .serv-card.offset-top .serv-card-inner .icon {
+        margin-right: 2rem;
+        margin-left: 0;
+    }
+
+    span.text-header {
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 50px;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 1rem;
+    }
+
+    .text-header p.ml12 {
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+
+    header{
+        background-position: center;
+    }
+
+    .header-inner {
+        height: 100%;
+        justify-content: unset;
+        margin-top: 4rem;
+    }
+    .header-btns a {
+        width: 13rem;
+        margin-bottom: 1.5rem;
+    }
+    .header-btns {
+        display: flex;
+        flex-flow: column;
+    }
+    .header-subtext {
+        margin-bottom: 0;
+    }
+
+    p.label {
+        white-space: normal;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+
+    p.exp {
+        font-size: 16px;
+    }
+
+    .prod-item {
+        margin-bottom: 3rem;
+        padding: 2%;
+    }
+
+    .prod-desc {
+        padding: 0;
+    }
+
+    .prod-name {
+        font-size: .9rem;
+        font-weight: 300;
+        white-space: nowrap;
+        margin: 0;
+    }
+    footer{
+        height: 100%;
+    }
+    
+    .footer-inner img.logo {
+        width: 250px;
+        margin-bottom: 5rem;
+    }
+
+    .footer-inner > .d-flex {
+        flex-flow: column;
+    }
+
+    .foot-left{
+        border-right: none;
+    }
+
+
+    .foot-right {
+        text-align: left;
+        border-left: none;
+        border-top: solid white 2px;
+        justify-content: flex-start;
+    }
+
 }

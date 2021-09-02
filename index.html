@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
   <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -82,8 +83,8 @@
 <body>
 
     
-     <header style="background-image: url('imgs/header.png');">
-        <nav class="navbar navbar-expand-lg navbar-light container">
+    <header class="pc" style="background-image: url('imgs/header.png');">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
         <a class="navbar-brand" href="#">
             <img src="imgs/logo.png" />
         </a>
@@ -94,16 +95,59 @@
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="index.html#services">Services</a>
-                <a class="nav-item nav-link" href="index.html#about-us">Shop</a>
-                <a class="nav-item nav-link" id="contact" href="index.html#contact-info">Contact Us</a>
+                <a class="nav-item nav-link" href="index.html#products">Shop</a>
+                <a class="nav-item nav-link" id="contact" href="#contact">Contact Us</a>
             </div>
         </div>
-    </nav>
+        </nav>
 
       <div class="container header-inner">
-            <span class="text-header">
-            <p class="ml12">For your printing needs.</p>
+            <span class="text-header pc">
+                <p class="ml12">For your printing needs.</p>
+            </span>
+            <span class="text-header mobile">
+                <p class="ml12">For your<br>printing needs.</p>
+            </span>
+        <span class="header-subtext desc-format">
+            <p>
+                We are a small business that offers different kinds of printing. We specialize in designing and printing customized or personalized items that’s perfect for any occasion.
+            </p>
         </span>
+
+        <div class="header-btns">
+            <a href="" class="btn btn-default btn-white">Contact Us</a>
+            <a href="" class="btn btn-default btn-white">Our Services</a>
+        </div>
+      </div>
+       <!--  <img src="imgs/Header.png" /> -->
+
+    </header>
+
+     <header class="mobile" style="background-image: url('imgs/head.png');">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand" href="#">
+            <img src="imgs/logo.png" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="index.html#services">Services</a>
+                <a class="nav-item nav-link" href="index.html#products">Shop</a>
+                <a class="nav-item nav-link" id="contact" href="#contact">Contact Us</a>
+            </div>
+        </div>
+        </nav>
+
+      <div class="container header-inner">
+            <span class="text-header pc">
+                <p class="ml12">For your printing needs.</p>
+            </span>
+            <span class="text-header mobile">
+                <p class="ml12">For your<br>printing needs.</p>
+            </span>
         <span class="header-subtext desc-format">
             <p>
                 We are a small business that offers different kinds of printing. We specialize in designing and printing customized or personalized items that’s perfect for any occasion.
@@ -295,7 +339,7 @@
         </div>
     </section>
     <section id="products">
-        <div class="container prods">
+        <div class="container prods pc">
              <div class="section-title">
                 <h1 class="title">check out our products</h1>
                 <span class="section-hr"><span class="blue">・</span><span class="pink">・</span><span class="yellow">・</span><span class="black">・</span></span>
@@ -372,20 +416,100 @@
                 </div>
             </div>
         </div>
+
+         <div class="container prods mobile">
+             <div class="section-title">
+                <h1 class="title">check out our products</h1>
+                <span class="section-hr"><span class="blue">・</span><span class="pink">・</span><span class="yellow">・</span><span class="black">・</span></span>
+            </div>
+
+            <div class="d-flex">
+                <div class="prod-item">
+                    <div class="prod-item-inner">
+                        <div class="prod-img">
+                            <img src="imgs/a1.png">
+                        </div>
+                        <div class="prod-desc">
+                            <p class="prod-name">Personalized Mugs</p>
+                            <p class="prod-price">₱ 120.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prod-item">
+                    <div class="prod-item-inner">
+                        <div class="prod-img">
+                            <img src="imgs/a2.png">
+                        </div>
+                        <div class="prod-desc">
+                            <p class="prod-name">Personalized Tote Bag</p>
+                            <p class="prod-price">₱ 180.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex">
+                 <div class="prod-item">
+                    <div class="prod-item-inner">
+                        <div class="prod-img">
+                            <img src="imgs/a3.png">
+                        </div>
+                        <div class="prod-desc">
+                            <p class="prod-name">Business Cards</p>
+                            <p class="prod-price">₱ 100.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prod-item">
+                    <div class="prod-item-inner">
+                        <div class="prod-img">
+                            <img src="imgs/a4.png">
+                        </div>
+                        <div class="prod-desc">
+                            <p class="prod-name">Instax-Inspired Keychain</p>
+                            <p class="prod-price">₱25.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="d-flex">  
+                <div class="prod-item">
+                    <div class="prod-item-inner">
+                        <div class="prod-img">
+                            <img src="imgs/a5.png">
+                        </div>
+                        <div class="prod-desc">
+                            <p class="prod-name">Decals</p>
+                            <p class="prod-price">₱ 100.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prod-item">
+                    <div class="prod-item-inner">
+                        <div class="prod-img">
+                            <img src="imgs/a6.png">
+                        </div>
+                        <div class="prod-desc">
+                            <p class="prod-name">Photo Printing</p>
+                            <p class="prod-price">₱ 10.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
    
-    <footer style="background-image: url('imgs/footer.png');">
+    <footer style="background-image: url('imgs/footer.png');" id="contact">
         <div class="footer-inner container d-flex flex-column">
              <img class="logo" src="imgs/logo.png" />
              <div class="d-flex">
-                 <div class="border-right justify-content-start foot-left">
+                 <div class="justify-content-start foot-left">
                     <div class="inner">
                          <p class="foot-desc">ready to order?</p>
                      <p class="foot-sub-desc">Do you have any questions or inquiries? No worries! Just leave us a message through our Facebook page or email and we’ll get right back at you.</p>
                     </div>
                  </div>
 
-                 <div class="border-left justify-content-end foot-right">
+                 <div class="foot-right">
                     <div class="inner">
                          <p class="desc1">social links</p>
                          <p class="socials fb"><a href="https://www.facebook.com/jnljprints">Facebook</a></p>
