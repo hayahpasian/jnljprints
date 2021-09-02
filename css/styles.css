@@ -330,10 +330,13 @@ p.socials a {
 
     .container {
         max-width: 100%;
-        padding-left: 7.5%;
-        padding-right: 14%;
+       /* padding-left: 7.5%;
+        padding-right: 14%;*/
     }
 
+    .title {
+        font-size: 3rem;
+    }
     .navbar-brand {
         display: inline-flex;
         align-self: center;
@@ -439,11 +442,12 @@ p.socials a {
     footer{
         height: 100%;
     }
-    
+
     .footer-inner img.logo {
         width: 250px;
         margin-bottom: 5rem;
     }
+
 
     .footer-inner > .d-flex {
         flex-flow: column;
@@ -461,4 +465,11 @@ p.socials a {
         justify-content: flex-start;
     }
 
+    .prod-item {
+        width: 50%;
+    }
+
+    p.foot-desc {
+        white-space: nowrap;
+    }
 }
